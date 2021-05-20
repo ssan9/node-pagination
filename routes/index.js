@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-const router = require('./recipes');
+const { router: recipeRouter} = require('./recipes');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.send('<p>HTML Data</p>');
 });
 
-app.use('/recipes', router);
+app.use('/recipes', recipeRouter);
 
 module.exports = router;
