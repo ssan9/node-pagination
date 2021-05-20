@@ -8,7 +8,7 @@ const Recipes = {
 }
 
 router.get('/', (req, res) => {
-  res.json(Recipes.get());
+  res.status(200).json(Recipes.get());
 });
 
 module.exports = router;
