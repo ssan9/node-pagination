@@ -1,9 +1,11 @@
 var recipes = require('../recipes.json');
 var router = require('express').Router();
 
+const recipesList = require('./recipes.json');
+
 const Recipes = {
   get: async function() {
-    const res = await Object.keys(this.items).map(key => this.item[key]);
+    const res = await Object.keys(recipesList).map(key => recipesList[key]);
     return res;
   }
 }
