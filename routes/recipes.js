@@ -7,8 +7,9 @@ const Recipes = {
   }
 }
 
-router.get('/', (req, res) => {
-  res.status(200).json(Recipes.get());
+router.get('/', async (req, res) => {
+  const recipes = await Recipes.get();
+  res.status(200).json(recipes);
 });
 
 module.exports = router;
