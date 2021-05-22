@@ -17,8 +17,8 @@ const Recipes = {
   }
 };
 
-router.get('/:page?/:limit?', (req, res) => {
-  res.status(200).json(Recipes.get(req.params));
+router.get('/', (req, res) => {
+  res.status(200).json(Recipes.get(req.query));
 });
 
 module.exports = router;
