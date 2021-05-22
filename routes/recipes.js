@@ -2,7 +2,7 @@ var recipes = require('../recipes.json');
 var router = require('express').Router();
 
 const Recipes = {
-  get: function(page, limit) {
+  get: (page, limit) => {
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
     return recipes.slice(startIndex, endIndex);
